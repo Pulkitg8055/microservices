@@ -15,7 +15,7 @@ public record CustomerService(
         //todo: check if email valid
         //todo: check if email not taken
         customerRepository.saveAndFlush(customer);
-        FraudCheckResponse fraudCheckResponse = restTemplate.getForObject("http://localhost:8081/api/v1/fraud-check/{customerId}",
+        FraudCheckResponse fraudCheckResponse = restTemplate.getForObject("http://FRAUD/api/v1/fraud-check/{customerId}",
                 FraudCheckResponse.class, customer.getId());
         if(fraudCheckResponse.isFraudster())
             throw new IllegalStateException("fraudster");
