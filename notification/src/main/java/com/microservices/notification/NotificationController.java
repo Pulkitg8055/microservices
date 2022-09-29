@@ -1,5 +1,6 @@
 package com.microservices.notification;
 
+import com.microservices.clients.notification.NotificationRequest;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,3 +22,4 @@ public class NotificationController {
         notificationService.send(notificationRequest);
     }
 }
+

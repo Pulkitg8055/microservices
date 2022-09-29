@@ -1,5 +1,6 @@
 package com.microservices.notification;
 
+import com.microservices.clients.notification.NotificationRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
